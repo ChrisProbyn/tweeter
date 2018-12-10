@@ -7,8 +7,11 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -21,12 +24,25 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png" >
       <span class="header">Tweeter</span>
     </nav>
 
+
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo nisl quis nulla malesuada, vitae mollis lorem hendrerit. Vivamus finibus, diam a ultrices suscipit, nibh felis gravida leo, volutpat consectetur quam est at quam. Proin finibus vitae sapien quis consequat. Aliquam est tellus, mollis sed elit sit amet, ornare tempor quam. Sed sit amet vestibulum libero. Nunc eget interdum dolor. Integer dignissim quis nisl at euismod. Fusce faucibus porta metus, non condimentum purus porta vel. Proin nec egestas sem. Nulla tellus nibh, blandit quis hendrerit non, consectetur vel lectus. Vivamus aliquet diam eget consectetur consectetur. Sed at eros condimentum, fermentum erat quis, pulvinar nulla. Maecenas lobortis fermentum sodales.</p>
+
+    <p>Cras gravida rhoncus urna, eu eleifend nibh dignissim at. Donec finibus, dui quis eleifend lobortis, sem turpis ullamcorper tellus, ac posuere turpis neque ut nibh. Nullam finibus orci in enim ultrices, sed elementum enim varius. Nullam libero lectus, auctor a libero vitae, ornare molestie enim. Praesent consectetur justo non velit rutrum congue. Duis vulputate ultricies malesuada. Vestibulum lacinia eros odio, eu facilisis est imperdiet vel. Etiam pulvinar et diam ut sodales. Integer libero lorem, hendrerit quis dapibus vitae, maximus vitae magna. Nullam pellentesque neque rhoncus pellentesque placerat. Etiam lobortis erat eget neque cursus ultrices. Fusce pharetra volutpat urna, vel luctus tortor lobortis sit amet. In egestas augue at felis dapibus, ac varius tortor ornare. Etiam viverra lorem at lectus iaculis, a fringilla massa semper. In porttitor molestie sapien, et luctus lorem consectetur non.</p>
+
     </main>
 
   </body>
