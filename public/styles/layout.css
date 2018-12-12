@@ -26,10 +26,17 @@ body {
   background-color: white;
   position: relative;
   margin: auto;
-  top:140px;
-
+  height: 100vh;
+  margin-bottom: 50px;
+  margin-top: 80px;
+  padding-top:60px;
+  padding-bottom: 60px;
 
 }
+
+
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

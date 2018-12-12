@@ -12,12 +12,15 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/old-tweets.css" type="text/css" />
+    <<script defer src="https://use.fontawesome.com/releases/v5.6.0/js/all.js" integrity="sha384-z9ZOvGHHo21RqN5De4rfJMoAxYpaVoiYhuJXPyVmSs8yn20IE3PmBM534CffwSJI" crossorigin="anonymous"></script>
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -31,17 +34,50 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form>
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+        <form method = "POST" action = "/tweets" >
+          <textarea class="textBox" name="text" placeholder="What are you humming about?" value =""></textarea>
+          <input class="button" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo nisl quis nulla malesuada, vitae mollis lorem hendrerit. Vivamus finibus, diam a ultrices suscipit, nibh felis gravida leo, volutpat consectetur quam est at quam. Proin finibus vitae sapien quis consequat. Aliquam est tellus, mollis sed elit sit amet, ornare tempor quam. Sed sit amet vestibulum libero. Nunc eget interdum dolor. Integer dignissim quis nisl at euismod. Fusce faucibus porta metus, non condimentum purus porta vel. Proin nec egestas sem. Nulla tellus nibh, blandit quis hendrerit non, consectetur vel lectus. Vivamus aliquet diam eget consectetur consectetur. Sed at eros condimentum, fermentum erat quis, pulvinar nulla. Maecenas lobortis fermentum sodales.</p>
 
-    <p>Cras gravida rhoncus urna, eu eleifend nibh dignissim at. Donec finibus, dui quis eleifend lobortis, sem turpis ullamcorper tellus, ac posuere turpis neque ut nibh. Nullam finibus orci in enim ultrices, sed elementum enim varius. Nullam libero lectus, auctor a libero vitae, ornare molestie enim. Praesent consectetur justo non velit rutrum congue. Duis vulputate ultricies malesuada. Vestibulum lacinia eros odio, eu facilisis est imperdiet vel. Etiam pulvinar et diam ut sodales. Integer libero lorem, hendrerit quis dapibus vitae, maximus vitae magna. Nullam pellentesque neque rhoncus pellentesque placerat. Etiam lobortis erat eget neque cursus ultrices. Fusce pharetra volutpat urna, vel luctus tortor lobortis sit amet. In egestas augue at felis dapibus, ac varius tortor ornare. Etiam viverra lorem at lectus iaculis, a fringilla massa semper. In porttitor molestie sapien, et luctus lorem consectetur non.</p>
+      <section class="tweets">
+
+        <article class="old-tweets">
+          <header class = "tweet-header">
+            <img class = "profileImage" src="/images/bird.png">
+            <p class="headerText">
+              header will go here
+            </p>
+            <p class="tweeeterHandle">
+              @exampleTwitterName
+            </p>
+          </header>
+          <body class="bodyOfTweet" >
+            <p class ="textOfTweet">
+            sample tweet
+          </p>
+          </body>
+          <footer class = "tweet-footer">
+            <p class = "tweet-footer-text">
+              10 days ago
+            </p>
+
+            <span class="icons">
+              <i class="fas fa-flag" ></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </span>
+
+          </footer>
+       </article>
+
+
+      </section>
+
 
     </main>
 
