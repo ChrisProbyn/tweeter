@@ -5,68 +5,44 @@
  */
 $(document).ready(function() {
   function createTweetElement(tweetData){
-   // name => header text
-   // image => profile image
-   // handle => tweeterHandel
-   // text => text of tweeet
-   // created_at => tweet-footer-text
+    var header = createTweetHeader();
+    var body = createTweetBody();
+    var footer = createTweetFooter();
 
-   // <article class="old-tweets">
-   //        <header class = "tweet-header">
-   //          <img class = "profileImage" src="/images/bird.png">
-   //          <p class="headerText">
-   //            header will go here
-   //          </p>
-   //          <p class="tweeeterHandle">
-   //            @exampleTwitterName
-   //          </p>
-   //        </header>
-   //        <body class="bodyOfTweet" >
-   //          <p class ="textOfTweet">
-   //          sample tweet
-   //        </p>
-   //        </body>
-   //        <footer class = "tweet-footer">
-   //          <p class = "tweet-footer-text">
-   //            10 days ago
-   //          </p>
+    return $("<article class='old-tweets'></article>").append(header,body,footer);
+  }
 
-   //          <span class="icons">
-   //            <i class="fas fa-flag" ></i>
-   //            <i class="fas fa-retweet"></i>
-   //            <i class="fas fa-heart"></i>
-   //          </span>
+  function createTweetHeader(){
+    var name = $("<p class='headerText'></p>").text(tweetData.user.name);
+    var image = $("<img class = 'profileImage'/>")
+    image.attr('src', tweetData.user.avatars.regular);
+    var handle = $("<p class='tweeeterHandle'></p>").text(tweetData.user.handle);
+    var header = $("<header class='tweet-header'></header>")
+    header.append(image,name,handle);
+    return header;
+  }
 
-   //        </footer>
-   //     </article>
-   var name = $("<p class='headerText'></p>").text(tweetData.user.name);
-   var image = $("<img class = 'profileImage'/>")
-   image.attr('src', tweetData.user.avatars.regular);
-   var text = $("<p class='textOfTweet'></p>").text(tweetData.content.text);
-   var time = $("<p class='tweet-footer-text'></p>").text(tweetData.created_at);
-   var handle = $("<p class='tweeeterHandle'></p>").text(tweetData.user.handle);
+  function createTweetFooter(){
+    var time = $("<p class='tweet-footer-text'></p>").text(tweetData.created_at);
+    var iconOne = $('<i class="fas fa-flag" ></i>');
+    var iconTwo = $('<i class="fas fa-retweet"></i>');
+    var iconThree = $('<i class="fas fa-heart" ></i>');
+    var span = $('<span class="icons"></span>').append(iconOne, iconTwo, iconThree);
+    var footer = $('<footer class = "tweet-footer"></footer>')
+    footer.append(time, span);
+    return footer;
+  }
 
-   var header = $("<header class='tweet-header'></header>")
-   header.append(image,name,handle);
-   var body = $('<div class="bodyOfTweet" ></div>');
-   body.append(text);
-   var article = $("<article class='old-tweets'></article>");
-   var iconOne = $('<i class="fas fa-flag" ></i>');
-   var iconTwo = $('<i class="fas fa-retweet"></i>');
-   var iconThree = $('<i class="fas fa-heart" ></i>');
-   var span = $('<span class="icons"></span>').append(iconOne, iconTwo, iconThree);
-   var footer = $('<footer class = "tweet-footer"></footer>')
-   footer.append(time, span)
+  function createTweetBody(){
+    var text = $("<p class='textOfTweet'></p>").text(tweetData.content.text);
+    var body = $('<div class="bodyOfTweet" ></div>');
+    body.append(text);
+    return body;
 
-   article.append(header,body,footer)
-
-   return article;
   }
 
   function renderTweets(tweets) {
-    // var returnArray = tweets.map( function (){
 
-    // })
     for(var tweet of tweets){
       $(".tweets").append(createTweetElement(tweet));
     }
