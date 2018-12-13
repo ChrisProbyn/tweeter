@@ -16,7 +16,7 @@
 }
 
 }
-#navbar.row::after {
+#navbar.row:after {
   content: "";
   display: table;
   clear: both;
@@ -34,6 +34,17 @@
   margin-top: 20px;
   margin-bottom: 20px;
 
+}
+.navButton {
+  width: 100px;
+  height: 60px;
+  float: right;
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: #e8fdff;
 
-
+}
+.navButton:hover{
+  background-color: white;
 }

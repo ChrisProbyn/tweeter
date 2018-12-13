@@ -23,7 +23,9 @@ $(document).ready(function() {
   }
 
   function createTweetFooter(tweetData){
-    var timeStamp = moment(tweetData.created_at).startOf('month').fromNow();
+
+    var timeStamp = moment(tweetData.created_at).fromNow();
+
     var time = $("<p class='tweet-footer-text'></p>").text(timeStamp);
     var iconOne = $('<i class="fas fa-flag" ></i>');
     var iconTwo = $('<i class="fas fa-retweet"></i>');
@@ -51,13 +53,18 @@ $(document).ready(function() {
 
     for(var tweet of tweets){
 
-      $(".tweets").append(createTweetElement(tweet));
+      $(".tweets").prepend(createTweetElement(tweet));
     }
   }
 
    loadTweets()
      .then(renderTweets)
 
+  $(".navButton").on("click", function (){
+    $(".new-tweet").slideToggle();
+
+    $(".textBox").select();
+  })
 
 
   $(".new-tweet").submit(function( event ) {
@@ -70,7 +77,11 @@ $(document).ready(function() {
     } else if(serializedText.slice(5).length === 0){
       alert("No blank Tweets")
     }
-    $.post("/tweets",serializedText);
+    $.post("/tweets",serializedText, function(){
+
+       loadTweets()
+          .then(renderTweets)
+    });
   });
 
 
