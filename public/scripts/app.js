@@ -66,22 +66,48 @@ $(document).ready(function() {
     $(".textBox").select();
   })
 
+  function validate(data){
+    var flag = false
+    var IsDisplayed = $(".errorMessage").css("display")
+
+    if(data.slice(5).length > 140 && IsDisplayed === "none"){
+      $(".errorMessage").text("Character length exceeded");
+      $(".errorMessage").slideToggle("fast");
+      flag = false;
+    }
+    else if(data.slice(5).length > 140 && IsDisplayed === "block"){
+      $(".errorMessage").text("Character length exceeded");
+      flag = false;
+    }
+    else if(data.slice(5).length === 0 && IsDisplayed === "none"){
+      $(".errorMessage").text("No blank Tweets");
+      $(".errorMessage").slideToggle("fast");
+      flag = false;
+    }
+    else if(data.slice(5).length === 0 && IsDisplayed === "block"){
+      $(".errorMessage").text("No blank Tweets");
+      flag = false;
+    }
+    if(data.slice(5).length !== 0 && data.slice(5).length <= 140){
+      $(".errorMessage").slideToggle("fast");
+      flag =  true;
+    }
+
+    return flag;
+  }
 
   $(".new-tweet").submit(function( event ) {
     event.preventDefault();
-
     var serializedText = $(".textBox").serialize();
-    console.log(serializedText.slice(5))
-    if(serializedText.slice(5).length > 140){
-      alert("Character length exceeded")
-    } else if(serializedText.slice(5).length === 0){
-      alert("No blank Tweets")
-    }
-    $.post("/tweets",serializedText, function(){
 
-       loadTweets()
-          .then(renderTweets)
-    });
+    if(validate(serializedText)){
+      $.post("/tweets",serializedText, function(){
+        loadTweets()
+        .then(renderTweets)
+
+      });
+
+  }
   });
 
 

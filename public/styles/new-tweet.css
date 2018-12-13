@@ -56,5 +56,13 @@ color: red;
 
 .errorMessage{
   color: red;
-
+  font-size: large;
+  background-color: lightgray;
+  margin: auto;
+  margin-bottom: 15px;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 3px;
+  width:80%;
+  display: none;
 }
