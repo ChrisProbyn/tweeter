@@ -23,7 +23,7 @@ mongo.connect(dbUrl, (err, db) => {
     throw err;
   }
 
-  var DataHelpers = makeDataHelpers(db, ObjectId);
+  var DataHelpers = makeDataHelpers(db);
   var tweetsRoutes = makeTweetsRoutes(DataHelpers);
   app.use("/tweets", tweetsRoutes);
 });

@@ -40,12 +40,18 @@
       </section>
 
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form method = "POST" action = "/tweets" >
-          <textarea class="textBox" name="text" placeholder="What are you humming about?" value =""></textarea>
-          <input class="button" type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
+        <div class="head">
+          <h2>Compose Tweet</h2>
+        </div>
+        <div class="body">
+          <form method = "POST" action = "/tweets" >
+            <textarea class="textBox" name="text" placeholder="What are you humming about?" value =""></textarea>
+          </form>
+        </div>
+        <div class="foot">
+            <input class="button" type="submit" value="Tweet">
+            <span class="counter">140</span>
+        </div>
       </section>
 
       <section class="tweets">

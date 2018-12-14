@@ -1,4 +1,5 @@
-.new-tweet {
+
+ .new-tweet {
   color: gray;
   border-style: solid;
   border-radius: 10px;
@@ -6,49 +7,52 @@
   background-color: lightgray;
   margin: 5%;
   display: none;
-}
 
+}
 .head {
-  display: flex;
+  display:flex;
 }
-
-h2 {
+ h2{
   flex-grow: 1;
   padding-left: 1em;
   justify-content: flex-start;
   border-bottom: 1px solid;
   color: black;
+
 }
 
 .foot {
-  display: flex;
+  display:flex;
   justify-content: space-between;
 }
 
-.textBox, .red {
-  resize: vertical;
-  width: 90%;
-  min-height: 30px;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-top: 5px;
-  padding-left: 5px;
+.textBox {
+resize: vertical;
+width: 90%;
+min-height: 30px;
+margin-left:5%;
+margin-right:5%;
+padding-top: 5px;
+padding-left: 5px;
+
 }
 
-.button {
+.button{
   margin-left: 5%;
   margin-bottom: 1em;
-}
 
+
+}
 .counter {
-  margin-right: 5%;
-}
+margin-right: 5%;
 
+}
 .red {
-  color: red;
+@extend .textBox;
+color: red;
 }
 
-.errorMessage {
+.errorMessage{
   color: red;
   font-size: x-large;
   background-color: lightgray;
@@ -57,8 +61,6 @@ h2 {
   text-align: center;
   border: 3px solid black;
   border-radius: 3px;
-  width: 80%;
+  width:80%;
   display: none;
 }
-
-/*# sourceMappingURL=new-tweet.css.map */

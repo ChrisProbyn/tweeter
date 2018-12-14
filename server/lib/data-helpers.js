@@ -11,25 +11,18 @@ const ObjectId =require("mongodb").ObjectId;
 module.exports = function makeDataHelpers(db) {
   return {
 
-    // Saves a tweet to `db`
-    saveTweet: function(newTweet, callback) {
+        // Saves a tweet to `db`
+        saveTweet: function(newTweet, callback) {
+            db.collection('tweets')
+            .insert(newTweet)
+            .then(callback(null, true));
+        },
 
-
-        db.collection('tweets')
-        .insert(newTweet)
-        .then(callback(null, true));
-
-    },
-
-    // Get all tweets in `db`, sorted by newest first
-    getTweets: function(callback) {
-        db.collection("tweets").find().toArray( (err, result) => {
-            callback (null, result.sort((a, b) => a.created_at - b.created_at))
-
-        });
-
-
-    }
-
-  };
+        // Get all tweets in `db`, sorted by newest first
+        getTweets: function(callback) {
+            db.collection("tweets").find().toArray( (err, result) => {
+                callback (null, result.sort((a, b) => a.created_at - b.created_at))
+            });
+        }
+    };
 }

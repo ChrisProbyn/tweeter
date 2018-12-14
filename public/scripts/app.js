@@ -23,13 +23,11 @@ $(document).ready(function() {
   }
 
   function createTweetFooter(tweetData){
-
     var timeStamp = moment(tweetData.created_at).fromNow();
-
     var time = $("<p class='tweet-footer-text'></p>").text(timeStamp);
     var iconOne = $('<i class="fas fa-flag" ></i>');
     var iconTwo = $('<i class="fas fa-retweet"></i>');
-    var iconThree = $('<i class="fas fa-heart" ></i>');
+    var iconThree = $('<i class="fas fa-heart"></i>');
     var span = $('<span class="icons"></span>').append(iconOne, iconTwo, iconThree);
     var footer = $('<footer class = "tweet-footer"></footer>')
     footer.append(time, span);
@@ -57,8 +55,8 @@ $(document).ready(function() {
     }
   }
 
-   loadTweets()
-     .then(renderTweets)
+  loadTweets()
+  .then(renderTweets)
 
   $(".navButton").on("click", function (){
     $(".new-tweet").slideToggle();
@@ -99,7 +97,7 @@ $(document).ready(function() {
     return flag;
   }
 
-  $(".new-tweet").submit(function( event ) {
+  $(".button").on("click", function( event ) {
     event.preventDefault();
     var serializedText = $(".textBox").serialize();
 
@@ -107,8 +105,8 @@ $(document).ready(function() {
       $.post("/tweets",serializedText, function(){
         loadTweets()
         .then(renderTweets)
-
       });
+
 
   }
   });

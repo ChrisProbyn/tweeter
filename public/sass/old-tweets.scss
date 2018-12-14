@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .old-tweets {
   color: gray;
   border-radius: 10px;
@@ -7,64 +6,64 @@
   margin-left: 5%;
   margin-top: 1%;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, .5);
+
 }
 
-.old-tweets:hover > .tweet-header {
-  opacity: 1;
+.old-tweets:hover > .tweet-header{
+  opacity: 1.0;
 }
 
-.old-tweets:hover .icons {
+
+
+.old-tweets:hover .icons{
   display: inline;
 }
 
 .old-tweets:hover {
   /*background: rgba(255, 255, 255, 1);*/
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 1);
 }
-
 /*
 .old-tweeets:hover > .tweet-footer{
   opacity: 1.0;
 }*/
-.tweet-header {
+
+.tweet-header{
   padding: 1px;
   background-color: lightgray;
-  height: 50px;
+  height:50px;
   color: black;
-  opacity: 0.6;
+  opacity: .6;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;;
   align-items: center;
 }
-
-Ω .bodyOfTweet {
+Ω
+.bodyOfTweet {
   height: 100px;
   justify-content: flex-start;
   display: flex;
 }
-
-.textOfTweet {
+.textOfTweet{
   padding-left: 20px;
   color: darkslategrey;
 }
-
 .tweet-footer {
   height: 10%;
   border-top: 1px solid;
   display: flex;
   justify-content: space-between;
 }
+.tweet-footer-text{
 
-.tweet-footer-text {
   font-size: small;
   margin: 0px;
   padding-left: 5px;
   padding-top: 5px;
   color: darkslategrey;
 }
-
-.profileImage {
+.profileImage{
   margin-left: auto;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -73,27 +72,29 @@
   width: 40px;
   background-color: red;
   border-radius: 5px;
-}
 
+}
 .tweeeterHandle {
   align-self: flex-end;
   padding-right: 3px;
+
   color: grey;
   font-size: x-small;
 }
-
 .headerText {
+
   top: 8px;
   padding-right: 110px;
   font-weight: bold;
   color: darkslategrey;
+
 }
 
+
 .icons {
+
   align-self: flex-end;
   color: #00a087;
   margin: 5px;
   display: none;
 }
-
-/*# sourceMappingURL=old-tweets.css.map */

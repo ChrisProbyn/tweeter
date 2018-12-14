@@ -1,9 +1,11 @@
-#nav-bar {
+@import 'vars';
+
+#nav-bar{
   margin: 0;
   color: #e8fdff;
   background-color: #00a087;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: calc(1vw + 30px);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: $fontSize;
   position: fixed;
   padding-left: 2em;
   padding-right: 2em;
@@ -14,26 +16,26 @@
   z-index: 1;
 }
 
+
 #navbar.row:after {
   content: "";
   display: table;
   clear: both;
 }
-
-#nav-bar .logo {
+#nav-bar .logo{
   height: 80px;
   width: 80px;
   float: left;
-}
 
-.header {
+}
+ .header{
   float: left;
-  font-size: x-large;
+  font-size:x-large;
   padding-left: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
-}
 
+}
 .navButton {
   width: 100px;
   height: 60px;
@@ -42,10 +44,8 @@
   border: 1px solid;
   border-radius: 10px;
   background-color: #e8fdff;
-}
 
-.navButton:hover {
+}
+.navButton:hover{
   background-color: white;
 }
-
-/*# sourceMappingURL=nav.css.map */
