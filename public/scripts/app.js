@@ -88,8 +88,11 @@ $(document).ready(function() {
       $(".errorMessage").text("No blank Tweets");
       flag = false;
     }
-    if(data.slice(5).length !== 0 && data.slice(5).length <= 140){
+    if(data.slice(5).length !== 0 && data.slice(5).length <= 140 && IsDisplayed === "block"){
       $(".errorMessage").slideToggle("fast");
+      flag =  true;
+    }
+    else if(data.slice(5).length !== 0 && data.slice(5).length <= 140){
       flag =  true;
     }
 
