@@ -29,3 +29,6 @@ Tweeter is a simple, single-page Twitter clonec built wiht HTML,SASS, CSS, JS, j
 - SASS
 - JQuery
 - Moment.js
+- Body parser
+- Chance
+- Md5
