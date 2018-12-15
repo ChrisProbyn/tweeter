@@ -1,4 +1,4 @@
-.old-tweets {
+.oldTweets {
   color: gray;
   border-radius: 10px;
   background-color: white;
@@ -10,26 +10,23 @@
 
 }
 
-.old-tweets:hover > .tweet-header{
+.oldTweets:hover > .tweetHeader{
   opacity: 1.0;
 }
 
 
 
-.old-tweets:hover .icons{
-  display: inline;
+.oldTweets:hover .icons{
+  visibility: visible;
 }
 
-.old-tweets:hover {
+.oldTweets:hover {
   /*background: rgba(255, 255, 255, 1);*/
   border: 1px solid rgba(0, 0, 0, 1);
 }
-/*
-.old-tweeets:hover > .tweet-footer{
-  opacity: 1.0;
-}*/
 
-.tweet-header{
+
+.tweetHeader{
   padding: 1px;
   background-color: lightgray;
   height:50px;
@@ -39,7 +36,7 @@
   justify-content: space-between;;
   align-items: center;
 }
-Ω
+
 .bodyOfTweet {
   height: 100px;
   justify-content: flex-start;
@@ -49,18 +46,18 @@
   padding-left: 20px;
   color: darkslategrey;
 }
-.tweet-footer {
+.tweetFooter {
   height: 10%;
   border-top: 1px solid;
   display: flex;
   justify-content: space-between;
 }
-.tweet-footer-text{
+.tweetFooterText{
 
   font-size: small;
   margin: 0px;
   padding-left: 5px;
-  padding-top: 5px;
+  padding-top: 2.5%;
   color: darkslategrey;
 }
 .profileImage{
@@ -96,5 +93,5 @@
   align-self: flex-end;
   color: #00a087;
   margin: 5px;
-  display: none;
+  visibility: hidden;
 }

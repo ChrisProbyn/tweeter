@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
+  //this checks that the length of the text area is less than 140 characters and length
+  //if the text is longer than 140 the text will turn red and a error warning will show up
 
-  $(".textBox").on("input", function() {
+  $(".textBox").on("keyup", function() {
     var IsDisplayed = $(".errorMessage").css("display")
     if(140 - this.value.length >= 0 && IsDisplayed === "none"){
         $("textarea").removeClass("red");

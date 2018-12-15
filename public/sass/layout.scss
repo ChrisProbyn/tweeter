@@ -1,3 +1,4 @@
+//generates css for the page layout
 @import 'vars';
 
 html {
@@ -10,7 +11,7 @@ html {
 /*
  * Global layout stuff
  */
-
+//makes the font size depending on the screen size
 body {
   margin: 0;
   color: #244751;
@@ -18,7 +19,7 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: $fontSize;
 }
-
+//made the container relative to the screen size
 .container {
   width: 100%;
   max-width: 800px;

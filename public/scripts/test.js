@@ -5,7 +5,6 @@
    // text => text of tweeet
    // created_at => tweet-footer-text
 
-
    console.log(tweet.user)
   }
 

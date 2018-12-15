@@ -1,4 +1,10 @@
-.new-tweet {
+/*
+*
+*
+Machine generated css from sass, do not edit
+*
+*/
+.newTweet {
   color: gray;
   border-style: solid;
   border-radius: 10px;
@@ -13,6 +19,7 @@
 }
 
 h2 {
+  text-size: 1em;
   flex-grow: 1;
   padding-left: 1em;
   justify-content: flex-start;

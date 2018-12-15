@@ -1,6 +1,7 @@
+//creates css for the navigation bar
 @import 'vars';
 
-#nav-bar{
+#navBar{
   margin: 0;
   color: #e8fdff;
   background-color: #00a087;
@@ -22,7 +23,7 @@
   display: table;
   clear: both;
 }
-#nav-bar .logo{
+#navBar .logo{
   height: 80px;
   width: 80px;
   float: left;
@@ -37,7 +38,7 @@
 
 }
 .navButton {
-  width: 100px;
+  // width: 100px;
   height: 60px;
   float: right;
   margin-top: 10px;
