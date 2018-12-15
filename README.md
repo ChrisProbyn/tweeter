@@ -13,7 +13,6 @@ Tweeter is a simple, single-page Twitter clonec built wiht HTML,SASS, CSS, JS, j
 ## Final Project
 
 !["Compose tweet form viewed from Desktop"](
-
         https://github.com/ChrisProbyn/tweeter/blob/master/public/docs/Desktop-View-ComposeTweets.png?raw=true
       )
 !["non functional like,share, and re-tweet buttons viewed from a Pixel 2 with landscape orientation"](
