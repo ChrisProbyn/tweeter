@@ -11,6 +11,7 @@ Tweeter is a simple, single-page Twitter clonec built wiht HTML,SASS, CSS, JS, j
 5. Go to <http://localhost:8080/> in your browser.
 
 ## Final Project
+
 !["Compose tweet form viewed from Desktop"](
 
         https://github.com/ChrisProbyn/tweeter/blob/master/public/docs/Desktop-View-ComposeTweets.png?raw=true
